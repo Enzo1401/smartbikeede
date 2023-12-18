@@ -1,0 +1,81 @@
+créer database smartbike
+
+creer des tables:
+velos(id_velos, couleur, taille,type,photos,prix, description)
+contacts(id_clients,nom,prenom,email,message)
+
+
+CREATE TABLE Clients(
+   ID_Client INT NOT NULL AUTO_INCREMENT,
+   Nom VARCHAR(90),
+   Prenom VARCHAR(90),
+   Age INT,
+   Ville VARCHAR(100),
+   Adresse VARCHAR(255),
+   Email VARCHAR(100),
+   CONSTRAINT PK_Clients PRIMARY KEY (ID_Client)
+)ENGINE=InnoDB;
+
+CREATE TABLE Produits(
+   ID_Produit INT NOT NULL AUTO_INCREMENT,
+   Nom VARCHAR(90),
+   Description TEXT,
+   Prix INT NOT NULL,
+   CONSTRAINT PK_Produits PRIMARY KEY(ID_Produit)
+)ENGINE=InnoDB;
+
+CREATE TABLE Photos(
+   ID_Photo INT NOT NULL AUTO_INCREMENT,
+   Url VARCHAR(255),
+   ID_Produit INT NOT NULL,
+   CONSTRAINT PK_Photos PRIMARY KEY(ID_Photo),
+   FOREIGN KEY(ID_Produit) REFERENCES Produits(ID_Produit)
+)ENGINE=InnoDB;
+
+CREATE TABLE Commandes(
+   ID_Commande INT NOT NULL AUTO_INCREMENT,
+   Date_Commande VARCHAR(90),
+   Adresse_Livraison VARCHAR(50),
+   ID_Produit INT NOT NULL,
+   ID_Client INT NOT NULL,
+   CONSTRAINT PK_Commandes PRIMARY KEY(ID_Commande),
+   FOREIGN KEY(ID_Produit) REFERENCES Produits(ID_Produit),
+   FOREIGN KEY(ID_Client) REFERENCES Clients(ID_Client)
+)ENGINE=InnoDB;
+
+CREATE TABLE Messages_(
+   ID_Messages_ INT NOT NULL AUTO_INCREMENT,
+   Message_Client TEXT NOT NULL,
+   Date_heure DATETIME,
+   ID_Commande INT NOT NULL,
+   CONSTRAINT PK_Messages PRIMARY KEY(ID_Messages_),
+   FOREIGN KEY(ID_Commande) REFERENCES Commandes(ID_Commande)
+)ENGINE=InnoDB;
+
+
+
+
+
+
+
+insert into produits (ID_Produit,Nom,Description,Prix)
+Values 
+(1, 'BikeOne', "Pour les amateurs de vitesse et de performance, notre vélo électrique de course est conçu pour repousser les limites. Léger, aérodynamique et équipé d'une assistance électrique haute performance, ce vélo offre une expérience de conduite exceptionnelle." , '1 200 €')
+(2,'Bike22', 'Simplifiez vos déplacements avec notre vélo pliant électrique. Compact et pratique, ce vélo offre une solution de mobilité idéale pour les citadins dynamiques. Sa fonction de pliage rapide permet de le ranger facilement dans les espaces restreints, que ce soit dans le métro, le bus ou chez vous.','2 500 €')
+(3,BikeFirst,'Prêt à conquérir tous les terrains, notre vélo tout-terrain électrique est votre compagnon idéal pour les aventures en plein air. Doté d'une puissante assistance électrique, ce vélo vous permet d'explorer des sentiers escarpés et des chemins sinueux sans effort.',900 €)
+(4,Bike5,"Prêt à conquérir tous les terrains, notre vélo tout-terrain électrique est votre compagnon idéal pour les aventures en plein air. Doté d'une puissante assistance électrique, ce vélo vous permet d'explorer des sentiers escarpés et des chemins sinueux sans effort.", '3 000 €')
+
+UPDATE produits
+SET Description = 'Découvrez l'alliance parfaite entre style et durabilité avec notre vélo électrique urbain. Conçu pour les déplacements en ville, ce vélo allie une esthétique moderne à une assistance électrique fluide. '
+WHERE Nom = 'BikeFirst';
+
+
+
+
+
+
+
+makettage
+zoning= faire le site sans texte avec la disposition de chaque truc 
+wireframe= on mets les titres, les liens, etc
+mockup

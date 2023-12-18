@@ -1,0 +1,577 @@
+/*----------header----------*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    padding-top: 71px; /* Ajoutez un espace équivalent à la hauteur du menu */
+}
+
+header{
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img{
+    width: 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.logo a {
+    color:black;
+    text-decoration: none;
+}
+
+.no-decoration{
+    color: black;
+}
+
+nav{
+    margin-left: auto;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    border: 1px solid black transparent;
+    margin: 1px;
+    padding: 8px;
+    transition: 0.6s ease;
+    border-radius: 6px;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+/*----------header----------*/
+
+/*----------hero----------*/
+.hero {
+    min-height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(http://localhost/smartbike/image/banner1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 50px 50px; /* Ajustez la marge supérieure et inférieure au besoin */
+    margin-top: -50px; /* Ajoutez cette ligne pour compenser l'espace blanc */
+    padding-top: 150px;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    font-size: 1.5em;
+}
+/*----------hero----------*/
+
+/*page apropos*/
+
+.container-apropos {
+    max-width: 800px;
+    text-align: center;
+    margin: 20px auto;
+    font-family: Arial, sans-serif; 
+    line-height: 2; /* Ajoutez cette ligne pour ajuster l'espacement des lignes */
+    margin-top: 30px;
+}
+
+.titre {
+    color: black;
+}
+
+.propos {
+    margin-top:50px;
+}
+
+.para {
+    color: grey;
+}
+
+/*page contact*/
+
+.form{
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+#ville,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button{
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        
+}
+.button:hover {
+    background-color: #45a049;
+}
+
+
+#ville{
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center ;
+}
+   
+/*page confirmation*/
+
+.confirmation{
+    text-align: center;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin-top: 10%;
+    font-size: 50px;
+    
+}
+.confirmation2{
+    text-align: center;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin-top: 10%;
+    font-size: 25px;
+    
+}
+.retour{
+    background-color: #4caf50;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        position: fixed;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+/*pages produits*/
+/* Réinitialisation des styles pour assurer une cohérence entre les navigateurs */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de base pour le corps de la page */
+.body1 {
+    font-family: 'Montserrat', sans-serif; /* Utilisez la police que vous avez choisie */
+    line-height: 1.6;
+    color: #333; /* Couleur du texte principale */
+    background-color: #f8f8f8; /* Couleur de fond de la page */
+    text-align: center;
+}
+
+.product-box {
+    display: inline-block;
+    width: 400px; /* Ajustez la largeur selon vos besoins */
+    margin: 20px; /* Ajoute une marge autour des boîtes */
+    text-align: center; /* Rétablit l'alignement du texte à gauche à l'intérieur des boîtes */
+    border: 1px solid #ccc; /* Ajoute une bordure */
+    border-radius: 4px; /* Ajoute une bordure arrondie */
+    padding: 15px; /* Ajoute du rembourrage à l'intérieur de la boîte */
+    box-sizing: border-box; /* Inclut la bordure et le rembourrage dans la largeur totale */
+}
+
+/* Style de base pour les boîtes de produit */
+.product-box + .product-box {
+    margin-left: 10px;
+    ;
+}
+
+/* Style pour le titre du produit */
+.product-title {
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #333; /* Couleur de fond du titre */
+    color: #fff; /* Couleur du texte du titre */
+}
+
+/* Style pour l'image du produit */
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style pour le prix du produit */
+.product-price {
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+/* Style pour le bouton de commande */
+.order-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #45a049;
+}
+
+
+/* page footer*/
+
+.footer{
+        background-color: #333;
+        color: #fff;
+        padding: 4px;
+        text-align: center; 
+        width: 100%;
+        
+}
+.titre-footer{
+    font-family: 'ttnorms',Helvetica Neue,helvetica,sans-serif;
+    font-size: 50px;
+    margin-top: 5%;
+}
+.contact{
+    text-align: center; 
+    margin-top: 3%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    order: -1;
+    flex: 1;
+}
+
+.iframe{
+    display: inline;
+    width: 95%;
+    
+}
+
+
+/* pages bike */
+.img1{
+border: #333 10px;
+}
+
+
+.photo-containeur{
+    margin-top: 100px;
+    margin-left: 200px;
+}
+.style-nom-bike{
+    font-family: Arial, sans-serif;
+    margin-left: 700px;
+    margin-top: -450px;
+    font-size: 100px;
+}
+
+.style-prix{
+    margin-left: 710px;
+    font-size: 20px;
+    
+}
+
+.style-description {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin-left: 700px;
+    line-height: 1.6;
+}
+.bouton-commande{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 710px;
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+/*----------commander----------*/
+
+h1{
+    text-align: center;
+}
+
+.form{
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+#ville,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button{
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        
+}
+.button:hover {
+    background-color: #45a049;
+}
+
+form select {
+    font-size: 15px; /* Taille de la police */
+    width: 100%; /* Occupe toute la largeur disponible */
+    margin-bottom: 30px;
+    margin-top: 15px;
+    text-align: center ;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/*----------commander----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 770px) {
+    .logo {
+        order: 1; /* Change l'ordre, le logo va en dessous */
+    }
+
+    nav {
+        order: 2; /* Change l'ordre, le menu va au-dessus */
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Requête média pour les écrans plus petits */
+@media screen and (max-width: 780px) {
+    .hero {
+        padding-top: 0px; /* Ajustez la marge supérieure pour les écrans plus petits */
+        margin-top: -20px;
+
+    }
+
+    .hero h2 {
+        font-size: 1.5em; /* Ajustez la taille de police pour h2 sur les écrans plus petits */
+        margin-top: 70px;
+    }
+
+    .hero h3 {
+        font-size: 1.2em; /* Ajustez la taille de police pour h3 sur les écrans plus petits */
+
+       
+    }
+}
+
+@media screen and (max-width: 780px) {
+    
+    .titre {
+        margin-top: 150px;
+    }
+}
+
+/* Requête média pour les écrans plus petits */
+@media screen and (max-width: 720px) {
+    .form{
+        margin-top: 95px;
+        max-width: 450px;
+       
+    }
+}
+
+/* Requête média pour les écrans plus petits */
+@media screen and (max-width:780px) {
+    .product-box{
+        margin-top: 105px;
+        
+       
+    }
+}
+
+@media screen and (max-width:1130px) {
+    .img1{
+        margin-left: 0;
+        width: 500px; 
+        height: auto;
+
+    }
+    .photo-containeur{
+        margin-top: 150px;
+        margin-left: -5px;
+        
+       
+    }
+    .style-nom-bike{
+        margin-top: 5px;
+        margin-left: 10px;
+
+    }
+    .style-prix{
+        margin-top: 5px;
+        margin-left: 10px;
+
+    }
+    .style-description{
+        margin-top: 5px;
+        margin-left: 10px;
+
+    }
+    .bouton-commande{
+        margin-top: 5px;
+        margin-left: 10px;
+        
+    }
+}
+
+@media screen and (max-width:770px) {
+.img1{
+    margin-left: 0;
+    width: 500px; 
+    height: auto;
+
+}
+.photo-containeur{
+    margin-top: 110px;
+    margin-left: -5px;
+   
+}
+.style-nom-bike{
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+.style-prix{
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+.style-description{
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+.bouton-commande{
+    margin-top: 5px;
+    margin-left: 10px;
+    
+}
+}
+
+@media screen and (max-width:770px) {
+    .container-apropos {
+        max-width: 800px;
+        text-align: center;
+        margin: 20px auto;
+        font-family: Arial, sans-serif; 
+        line-height: 2; /* Ajoutez cette ligne pour ajuster l'espacement des lignes */
+        margin-top: -100px;
+        font-size: 15px;
+    }
+}
